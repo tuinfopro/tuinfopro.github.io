@@ -1,0 +1,1 @@
+document.write('<div id="divtuinfopro"><div><a href="index.html"><img src="images/logo.jpg" name="logo" width="87" height="84" class="logo" id="logo"/></a></div><div id="txttitle"><h1><strong>TU INFO</strong><i>rmacion</i><strong>PRO</strong><i>fesional</i></h1></div></div>')

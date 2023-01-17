@@ -1,0 +1,102 @@
+<script language="javascript" type="text/javascript" src="include/begin.txt"></script>
+
+<div id="A1">
+<div id="B2">
+<div class="short" id="C3">
+<section>
+<div id="welcome">
+<div id="divmail" style="width:400px" align="left">
+<style>
+#divmail {float:left;}
+</style>
+
+<h2 align="left">PETICIONES, QUEJAS Y/O COMENTARIOS</h2><br />
+<form id="form_email" method="POST">
+NOMBRE:<br /><input type="text" id="name" name="name" /><br />
+CORREO:<br /><input type="email" id="email" name="email" /><br />
+TEMA:<br /><input type="text" id="subject" name="subject" /><br />
+MENSAJE:<br /><textarea id="message" name="message" rows="15" cols="40"></textarea><br />
+<p></p>
+<button id="submitdata">Enviar</button>
+</form>
+<script language="javascript" type="text/javascript" src="mail.txt">
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+var api_url= 'https://9rvryri8p3.execute-api.us-east-1.amazonaws.com/prod/mail';
+
+$('#submitdata').on('click', function(){
+    $.ajax({
+        type: 'POST',
+        url: api_url,
+        data: JSON.stringify({"email": $('#email').val(),"name": $('#name').val(),"subject": $('#subject').val(),"message": $('#message').val()}),
+        contentType: "application/json",
+        
+        success: function(data){ 
+            location.reload();
+        }
+    });
+    return false;
+});
+</script>
+
+
+<!--<script language="javascript">
+	function enviar() {
+		var email = document.getElementById('email').value;
+		var name = document.getElementById('name').value;
+		if (!!email) {
+			api = "https://9rvryri8p3.execute-api.us-east-1.amazonaws.com/prod/mail";
+			document.getElementById('form_email').action = api;
+			document.getElementById('form_email').submit();
+			//const url='';
+			fetch(api)
+			.then(data=>{return data.json()})
+			.then(res=>{console.log(res)})
+			if (!!data){
+				alert(res);
+				alert(data);
+			}else{
+				alert("no se pudo ejecutar el api");
+			}	
+				//alert(" los datos estan llenos ");
+				//setTimeout('', 5000);
+				//location.replace("http://www.tuinfopro.com")
+				//document.write('<meta http-equiv="refresh" content="1; url=http://tuinfopro.com/"/>')
+			} else {
+				//email != null && email != 'undifined'			
+				alert(" los datos no estan llenos ");
+				location.replace("http://www.tuinfopro.com/contacus.html")
+			}
+		}
+	</script>-->
+
+
+
+</div>
+</div> <!---welcome--->
+</section>
+</div> <!---C3--->
+<div  class="short" id="D4">
+<div id="googleMap" style="width:300px;height:300px;align:left"></div>
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(4.63,-74.09),
+    zoom:10,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGXUnbYDkxT0kq3Wtl2Oi2NCBlkAmTNHk&callback=myMap"></script>
+<!--
+<aside>
+<div style="500px">
+</div>
+</aside>-->
+</div> <!---D4--->
+</div> <!---B2--->
+</div> <!---A1--->
+
+<script language="javascript" type="text/javascript" src="include/ends.txt"></script>

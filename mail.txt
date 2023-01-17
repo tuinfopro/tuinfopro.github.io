@@ -1,0 +1,15 @@
+<script language="javascript">
+function enviar() {
+	if (email==null) {
+		var email = "document.getElementById('email_form').value;
+		    
+		} else {
+		document.write('<meta http-equiv="refresh" content="3; url=http://tuinfopro.com/" />');
+		
+		}
+		
+	}
+</script> 
+  
+
+

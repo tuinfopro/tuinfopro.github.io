@@ -1,0 +1,71 @@
+<script language="javascript" type="text/javascript" src="include/begin.txt"></script>
+
+
+<?php
+include 'include/function/function.php';
+
+$m_vacantes = 4;
+
+$url = 'https://www.computrabajo.com.co/ofertas-de-trabajo/?q=Ingeniera';
+
+//$m_vacantesel = 4;
+
+//$urlel = 'https://www.computrabajo.com.co/ofertas-de-trabajo/?q=Ingeniera';
+?>
+
+<div class="full" id="txt">
+</br>
+<h10>ESTUDIO DE SUELOS</h10>
+</p>
+<p>Para todo estudio de ingenieria basica es de gran importancia tener en cuenta los estudios existentes en esta seccion vamos a colocar algunos estudios de suelos para su consulta.
+</p>
+
+</div> <!---txt--->
+<div id="div1">
+<div id="div2">
+<div class="short"id="div3">
+<section>
+<div id="welcome">
+<p></p>
+<hr color="#000000" size="5"/>
+En lo siquientes links podran encontrar algunos estudios de suelos y cimentacion realizados en el territorio nacional.
+<p></p>
+
+<select id="estudiosuelos" onchange="source()" name="estudiodesuelos" size="1" style="width:500px">
+<option value="https://docs.google.com/viewer?srcid=0BwFQPMJEi17QaG8weV9GcEx6ZDg&pid=explorer&efh=false&a=v&chrome=false&embedded=true" name="estudiosuelo1" id="estudiosuelo1">Estudio de Suelos para cimentacion de vivienda La Union Pasto</option>
+<option value="https://docs.google.com/viewer?srcid=0BwFQPMJEi17QVU5wWVlEVHBTU28&pid=explorer&efh=false&a=v&chrome=false&embedded=true" name="estudiosuelo2" id="estudiosuelo2">Estudio de Suelos y Cimentacion Bocatoma Hacienda La Pradera San Isidro de Chichimene Meta</option>
+<option value="https://docs.google.com/viewer?srcid=0BwFQPMJEi17QT1pObHhCdG5Kc28&pid=explorer&efh=false&a=v&chrome=false&embedded=true" name="estudiosuelo3" id="estudiosuelo3">Estudio de Suelos Y cimentacion puente el Maizaro Villavicencio</option>
+<option value="https://docs.google.com/viewer?srcid=0BwFQPMJEi17Qd01Qc2ZIV2hsUU0&pid=explorer&efh=false&a=v&chrome=false&embedded=true" name="estudiosuelo4" id="estudiosuelo4">Informe de Visita Tecnica Ibaque</option>
+</select>
+<p></p>
+<iframe id="iframeestudiosuelo" src="https://docs.google.com/viewer?srcid=0BwFQPMJEi17QaG8weV9GcEx6ZDg&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="100%" height="680px"></iframe>
+
+<script>
+  function source() {
+    var x = document.getElementById("estudiosuelos").value;
+	document.getElementById('iframeestudiosuelo').src = x;
+  }
+</script>
+
+</div> <!---welcome--->
+</section>
+</div> <!---div3--->
+<div  class="short"id="div4">
+<aside>
+<?php
+//include 'include/slideshowingenieria.php';
+
+url_job_computrabajo($m_vacantes,$url);
+
+//url_job_elempleo($m_vacantesel,$urlel);
+
+?>
+</aside>
+</div> <!---div4--->
+</div> <!---div2--->
+</div> <!---div1--->
+<div class="full" id="txt1">
+</div> <!---txt1--->
+
+
+<script language="javascript" type="text/javascript" src="include/ends.txt"></script>
